@@ -1,4 +1,12 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
+import { VisualCrossingWeatherAPI } from "./helpers/retrieve";
 
-console.log(greeting);
+// const location = document.querySelector("#location");
+// const locationBtn = document.querySelector("#location-btn");
+
+const API_KEY = "2GVKEVC38AZLFFAFL6Z9G4HYS";
+const weather = new VisualCrossingWeatherAPI(API_KEY);
+weather.setMainParameters("London", "today");
+weather.setSubParameters({ lang: "es" });
+
+weather.fetchData().then((res) => console.log(res));
