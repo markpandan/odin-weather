@@ -1,6 +1,8 @@
+import { DEFAULT_LOCATION_URI } from "./constants.js";
+
 export class VisualCrossingWeatherAPI {
   constructor(API_KEY) {
-    this.mainParams = ["United States"];
+    this.mainParams = DEFAULT_LOCATION_URI;
 
     this.subParams = new URLSearchParams();
     this.subParams.append("key", API_KEY);
@@ -23,7 +25,14 @@ export class VisualCrossingWeatherAPI {
   }
 
   setMainParameters(location, ...args) {
-    this.mainParams = [location, ...args].join("/");
+    location = location ? encodeURI(location) : DEFAULT_LOCATION_URI;
+    this.mainParams = [location];
+
+    args.forEach((value) => {
+      if (value) this.mainParams.push(value);
+    });
+
+    this.mainParams = this.mainParams.join("/");
   }
 
   setSubParameters(obj) {
