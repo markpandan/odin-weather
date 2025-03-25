@@ -1,8 +1,10 @@
 import { DEFAULT_LOCATION_URI } from "./constants.js";
 
+// TODO: add "includes" for the subparameter to limit the weather data fetching
 export class VisualCrossingWeatherAPI {
   constructor(API_KEY) {
     this.mainParams = DEFAULT_LOCATION_URI;
+    this.API_KEY = API_KEY;
 
     this.subParams = new URLSearchParams();
     this.subParams.append("key", API_KEY);

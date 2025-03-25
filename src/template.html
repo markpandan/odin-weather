@@ -6,17 +6,53 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <label for="location">Location:</label>
-      <input type="text" id="location" />
-      <button id="location-btn">Search</button>
-    </div>
+    <nav>
+      <div></div>
+      <div>
+        <input type="text" id="location" />
+        <button id="location-btn">Search</button>
+      </div>
+      <div>
+        <!-- TODO: Dark and Light Mode Toggler -->
+        <div>Dark Toggle</div>
+        <!-- Celsius or Fahrenheit -->
+        <div>Temperature</div>
+      </div>
+    </nav>
 
-    <div>
-      <label for="start-date">From</label>
-      <input type="date" id="start-date" />
-      <label for="end-date">To</label>
-      <input type="date" id="end-date" />
+    <!-- Jumbotron is aligned to the currentCondition -->
+    <div class="jumbotron">
+      <div>
+        <p>38.8904, -77.032</p>
+        <h1>United States</h1>
+        <p>Warming up with a chance of rain multiple days.</p>
+      </div>
+      <div>
+        <!-- icon -->
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="main-content">
+      <h1>Highlights</h1>
+      <div class="summary">
+        <div class="main-summary">
+          <div class=".cloud-cover"></div>
+          <div class=".dew"></div>
+          <div class="feels-like"></div>
+          <div class="humidity"></div>
+        </div>
+        <div class="sub-summary"></div>
+      </div>
+      <h1>Weekly Forecast</h1>
+      <div class="weather-list">
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+      </div>
     </div>
   </body>
 </html>

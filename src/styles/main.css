@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #101010;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  padding: 1rem;
+  background-color: #202020;
+  height: 20rem;
+}
+
+.main-content {
+  padding: 1rem;
+}
+
+.summary {
+  display: flex;
+  height: 20rem;
+}
+
+.sub-summary {
+  flex: 0.5;
+}
+
+.main-summary {
+  flex: 1;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.weather-list {
+  display: flex;
+  height: 20rem;
+}
+
+.weather-list > * {
+  flex: 1;
+}

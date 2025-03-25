@@ -1,8 +1,11 @@
-import "./styles.css";
+import "./styles/main.css";
+import "./styles/placeholder.css";
+
 import { VisualCrossingWeatherAPI } from "./helpers/retrieve";
 import { API_KEY } from "./helpers/constants.js";
 
 const weather = new VisualCrossingWeatherAPI(API_KEY);
+weather.setSubParameters({ unitGroup: "metric" });
 updateWeather();
 
 const location = document.querySelector("#location");
@@ -20,12 +23,12 @@ locationBtn.addEventListener("click", () => {
   updateWeather();
 });
 
-const startDate = document.querySelector("#start-date");
-const endDate = document.querySelector("#end-date");
+// const startDate = document.querySelector("#start-date");
+// const endDate = document.querySelector("#end-date");
 
-startDate.addEventListener("change", () => {
-  weather.setMainParameters(location.value, startDate.value, endDate.value);
-});
+// startDate.addEventListener("change", () => {
+//   weather.setMainParameters(location.value, startDate.value, endDate.value);
+// });
 
 function updateWeather() {
   weather.fetchData().then((res) => {
