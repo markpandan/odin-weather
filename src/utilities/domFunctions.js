@@ -1,4 +1,5 @@
 import { getDayText } from "./helpers";
+import { loadWeatherImage } from "../assets/weather";
 
 export function updateDOM(res) {
   updateJumbotronDOM(res);
@@ -38,11 +39,16 @@ function updateWeeklyForecastDOM(arrayData) {
     const dayContainer = document.createElement("div");
     dayContainer.classList.add("day-forecast");
     dayContainer.innerHTML = `          
-    <div class="circle"></div>
     <h1>${getDayText(day.datetime)}</h1>
     <h2>${day.datetime}</h2>
     <h2>${day.temp}C</h2>
     <p>${day.conditions}</p>`;
+
+    const img = document.createElement("img");
+    img.src = loadWeatherImage[day.icon];
+    img.alt = day.icon;
+    dayContainer.prepend(img);
+
     weekForcastConatiner.appendChild(dayContainer);
   });
 }

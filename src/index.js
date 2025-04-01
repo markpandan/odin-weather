@@ -8,6 +8,8 @@ import { DEFAULT_DYNAMIC_DATE_URI } from "./utilities/constants.js";
 
 const weather = new VisualCrossingWeatherAPI(API_KEY);
 weather.setSubParameters({ unitGroup: "metric" });
+weather.setSubParameters({ iconSet: "icons2" });
+
 updateWeatherInformation();
 
 const location = document.querySelector("#location");
