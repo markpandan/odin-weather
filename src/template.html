@@ -12,9 +12,9 @@
   <body>
     <nav>
       <div></div>
-      <div>
+      <div class="input-wrapper">
         <input type="text" id="location" />
-        <button id="location-btn">Search</button>
+        <i class="bi bi-search"></i>
       </div>
       <div>
         <!-- TODO: Dark and Light Mode Toggler -->
@@ -24,7 +24,7 @@
       </div>
     </nav>
 
-    <!-- Jumbotron is aligned to the currentCondition -->
+    <!-- Jumbotron is aligned to the currentCondition of the fetched data of Visual Crossing API -->
     <div class="jumbotron">
       <div>
         <p class="location-axis">0, 0</p>
@@ -35,7 +35,7 @@
       </div>
       <div>
         <!-- icon -->
-        <p>31 C</p>
+        <p><span class="location-temp"></span> C</p>
         <div class="circle"></div>
       </div>
     </div>

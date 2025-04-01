@@ -13,7 +13,7 @@ weather.setSubParameters({ iconSet: "icons2" });
 updateWeatherInformation();
 
 const location = document.querySelector("#location");
-const locationBtn = document.querySelector("#location-btn");
+// const locationBtn = document.querySelector("#location-btn");
 
 location.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
@@ -22,10 +22,10 @@ location.addEventListener("keypress", (e) => {
   }
 });
 
-locationBtn.addEventListener("click", () => {
-  weather.setMainParameters(location.value, DEFAULT_DYNAMIC_DATE_URI);
-  updateWeatherInformation();
-});
+// locationBtn.addEventListener("click", () => {
+//   weather.setMainParameters(location.value, DEFAULT_DYNAMIC_DATE_URI);
+//   updateWeatherInformation();
+// });
 
 function updateWeatherInformation() {
   weather.fetchData().then((res) => {

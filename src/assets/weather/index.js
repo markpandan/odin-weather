@@ -21,7 +21,7 @@ import thunderShowersNight from "./thunder-showers-night.svg";
 import thunder from "./thunder.svg";
 import wind from "./wind.svg";
 
-export const loadWeatherImage = {
+export const WEATHER_IMAGE = {
   "clear-day": clearDay,
   "clear-night": clearNight,
   cloudy: cloudy,

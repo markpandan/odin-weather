@@ -1,5 +1,5 @@
 import { getDayText } from "./helpers";
-import { loadWeatherImage } from "../assets/weather";
+import { WEATHER_IMAGE } from "../assets/weather";
 
 export function updateDOM(res) {
   updateJumbotronDOM(res);
@@ -11,10 +11,12 @@ function updateJumbotronDOM(data) {
   const locationAxis = document.querySelector(".location-axis");
   const locationName = document.querySelector(".location-name");
   const locationDesc = document.querySelector(".location-desc");
+  const locationTemp = document.querySelector(".location-temp");
 
   locationAxis.textContent = `${data.latitude}, ${data.longitude}`;
   locationName.textContent = data.address;
   locationDesc.textContent = data.description;
+  locationTemp.textContent = data.currentConditions.temp;
 }
 
 function updateHighlightsDOM(data) {
@@ -39,14 +41,17 @@ function updateWeeklyForecastDOM(arrayData) {
     const dayContainer = document.createElement("div");
     dayContainer.classList.add("day-forecast");
     dayContainer.innerHTML = `          
+    <div class="description">
     <h1>${getDayText(day.datetime)}</h1>
-    <h2>${day.datetime}</h2>
-    <h2>${day.temp}C</h2>
-    <p>${day.conditions}</p>`;
+    <h3>${day.datetime}</h3>
+    <h1>${day.temp} C</h1>
+    <p>${day.conditions}</p>
+    </div>`;
 
     const img = document.createElement("img");
-    img.src = loadWeatherImage[day.icon];
+    img.src = WEATHER_IMAGE[day.icon];
     img.alt = day.icon;
+    img.classList.add("weather");
     dayContainer.prepend(img);
 
     weekForcastConatiner.appendChild(dayContainer);
