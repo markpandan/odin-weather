@@ -6,7 +6,6 @@
 body {
   background-color: #101010;
   color: white;
-  /* margin: 0 20rem; */
 }
 
 nav {
@@ -14,6 +13,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+/* TODO: Use the calc() css function for responsive design */
+i {
+  font-size: 4rem;
 }
 
 .jumbotron {
@@ -48,7 +52,7 @@ nav {
 .main-summary > * {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .weather-list {
@@ -72,4 +76,8 @@ nav {
   justify-content: start;
   align-items: center;
   gap: 1rem;
+}
+
+img.svg {
+  color: white;
 }

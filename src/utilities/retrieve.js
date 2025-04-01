@@ -1,5 +1,7 @@
 import { DEFAULT_DYNAMIC_DATE_URI, DEFAULT_LOCATION_URI } from "./constants.js";
 
+// API Documentation: https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/
+
 // TODO: add "includes" for the subparameter to limit the weather data fetching
 export class VisualCrossingWeatherAPI {
   constructor(API_KEY) {

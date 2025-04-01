@@ -35,7 +35,6 @@ function updateWeeklyForecastDOM(arrayData) {
   weekForcastConatiner.textContent = "";
 
   arrayData.forEach((day) => {
-    // console.log(element);
     const dayContainer = document.createElement("div");
     dayContainer.classList.add("day-forecast");
     dayContainer.innerHTML = `          
