@@ -16,19 +16,22 @@
         <!-- TODO: Dark and Light Mode Toggler -->
         <div>Dark Toggle</div>
         <!-- Celsius or Fahrenheit -->
-        <div>Temperature</div>
+        <div>Temperature Metric</div>
       </div>
     </nav>
 
     <!-- Jumbotron is aligned to the currentCondition -->
     <div class="jumbotron">
       <div>
-        <p>38.8904, -77.032</p>
-        <h1>United States</h1>
-        <p>Warming up with a chance of rain multiple days.</p>
+        <p class="location-axis">0, 0</p>
+        <h1 class="location-name">United States</h1>
+        <p class="location-desc">
+          Warming up with a chance of rain multiple days.
+        </p>
       </div>
       <div>
         <!-- icon -->
+        <p>31 C</p>
         <div class="circle"></div>
       </div>
     </div>
@@ -36,23 +39,15 @@
       <h1>Highlights</h1>
       <div class="summary">
         <div class="main-summary">
-          <div class=".cloud-cover"></div>
-          <div class=".dew"></div>
-          <div class="feels-like"></div>
-          <div class="humidity"></div>
+          <div>Temperature:<span class="main-temperature"></span>C</div>
+          <div>Humidity:<span class="main-humidity"></span>%</div>
+          <div>Wind:<span class="main-wind"></span> km/hr</div>
+          <div>Precipitation: <span class="main-precipitation"></span>%</div>
         </div>
         <div class="sub-summary"></div>
       </div>
       <h1>Weekly Forecast</h1>
-      <div class="weather-list">
-        <div class="list"></div>
-        <div class="list"></div>
-        <div class="list"></div>
-        <div class="list"></div>
-        <div class="list"></div>
-        <div class="list"></div>
-        <div class="list"></div>
-      </div>
+      <div class="week-forecast-container"></div>
     </div>
   </body>
 </html>
