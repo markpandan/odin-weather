@@ -25,6 +25,9 @@ i {
   font-size: 4rem;
 }
 
+.main-content {
+  width: minmax(100%, 100rem);
+}
 div.input-wrapper {
   color: white;
   position: relative;
@@ -63,6 +66,17 @@ input#location {
   height: 20rem;
 }
 
+.jumbotron-weather {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.jumbotron-weather > img {
+  width: 3rem;
+  height: 3rem;
+}
+
 .main-content {
   padding: 1rem;
 }
@@ -78,10 +92,14 @@ input#location {
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 
-.sub-summary > * {
+.sub-summary > div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sub-summary > div > p > span {
+  font-size: 2rem;
 }
 
 .main-summary {

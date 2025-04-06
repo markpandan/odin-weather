@@ -11,12 +11,20 @@ function updateJumbotronDOM(data) {
   const locationAxis = document.querySelector(".location-axis");
   const locationName = document.querySelector(".location-name");
   const locationDesc = document.querySelector(".location-desc");
-  const locationTemp = document.querySelector(".location-temp");
+  // const locationTemp = document.querySelector(".location-temp");
+  const jumbotronWeather = document.querySelector(".jumbotron-weather");
 
   locationAxis.textContent = `${data.latitude}, ${data.longitude}`;
   locationName.textContent = data.address;
   locationDesc.textContent = data.description;
-  locationTemp.textContent = data.currentConditions.temp;
+  // locationTemp.textContent = data.currentConditions.temp;
+
+  const weatherImg = document.createElement("img");
+  weatherImg.src = WEATHER_IMAGE[data.currentConditions.icon];
+  weatherImg.alt = data.currentConditions.icon;
+
+  jumbotronWeather.textContent = "";
+  jumbotronWeather.appendChild(weatherImg);
 }
 
 function updateHighlightsDOM(data) {
