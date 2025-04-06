@@ -74,6 +74,14 @@ input#location {
 
 .sub-summary {
   flex: 0.5;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.sub-summary > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-summary {

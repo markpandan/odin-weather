@@ -25,10 +25,24 @@ function updateHighlightsDOM(data) {
   const mainWind = document.querySelector(".main-wind");
   const mainPrecipitation = document.querySelector(".main-precipitation");
 
+  const subFeelsLike = document.querySelector(".sub-feels-like");
+  const subSolarRadiation = document.querySelector(".sub-solar-radiation");
+  const subUvInddex = document.querySelector(".sub-uv-index");
+  const subPressure = document.querySelector(".sub-pressure");
+  const subDew = document.querySelector(".sub-dew");
+  const subVisibility = document.querySelector(".sub-visibility");
+
   mainTemperature.textContent = data.temp;
   mainHumidity.textContent = data.humidity;
   mainWind.textContent = data.windspeed;
   mainPrecipitation.textContent = data.precipprob;
+
+  subFeelsLike.textContent = data.feelslike;
+  subSolarRadiation.textContent = data.solarradiation;
+  subUvInddex.textContent = data.uvindex;
+  subPressure.textContent = data.pressure;
+  subDew.textContent = data.dew;
+  subVisibility.textContent = data.visibility;
 }
 
 function updateWeeklyForecastDOM(arrayData) {
