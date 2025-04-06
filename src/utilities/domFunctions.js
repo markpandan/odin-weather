@@ -62,6 +62,7 @@ function updateWeeklyForecastDOM(arrayData) {
   arrayData.forEach((day) => {
     const dayContainer = document.createElement("div");
     dayContainer.classList.add("day-forecast");
+    dayContainer.classList.add("section");
     dayContainer.innerHTML = `          
     <div class="description">
     <h1>${getDayText(day.datetime)}</h1>
