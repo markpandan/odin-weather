@@ -60,7 +60,8 @@ input#location {
 }
 
 .jumbotron {
-  background: url(../assets/wallpaper3.jpg);
+  /* Wallpaper Source: https://www.wallpaperflare.com/miui-8-weather-background-minimal-rainy-blue-silhouette-wallpaper-qqvyo */
+  background: url(../assets/wallpaper.jpg);
   background-size: cover;
 
   display: flex;
